@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区块设计参考 - C与D部分</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* 完美复刻您截图中的深色标题栏 */
+        .section-header {
+            background-color: #333333;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+
+        /* 表单行布局：电脑端并排，手机端自动堆叠 */
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1; /* 占据均等空间 */
+            min-width: 250px; /* 屏幕太小时自动换行 */
+        }
+
+        .form-group.full-width {
+            flex: 100%;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* 优化的输入框和下拉菜单，点击区域更大 */
+        input[type="text"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, 
+        select:focus, 
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+
+    <div class="section-header">
+        C. Recorded Information
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label>Fingerprints Taken?</label>
+            <select>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Photographs Taken?</label>
+            <select>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="section-header">
+        D. Status of Body
+    </div>
+
+    <div class="form-row">
+        <div class="form-group full-width">
+            <label>Storage Location:</label>
+            <input type="text" value="对方这边给你幸福的">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group full-width">
+            <label>Released To / Final Destination:</label>
+            <textarea rows="3" placeholder="Please enter details..."></textarea>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
